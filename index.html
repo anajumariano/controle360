@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Controle360</title>
+
+
+  <script src="./assets/js/tailwind.js"></script>
+<style type="text/tailwindcss">
+  @layer utilities {
+    .bg-verde        { background-color: #2e6c4d; }
+    .bg-verdelight   { background-color: #cfe9dd; }
+    .text-verde      { color: #2e6c4d; }
+
+    .bg-radial {
+      background-image: radial-gradient(circle at center, #1a1a1a, #2e6c4d);
+    }
+  }
+</style>
+
+
+  <script src="./assets/js/script.js"></script>
+
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/imagens/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/imagens/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/imagens/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body class="bg-radial min-h-screen flex flex-col items-center justify-center gap-6 p-4">
+
+
+  <div id="tela_fundo" class=" w-full max-w-md bg-verde text-white rounded-xl shadow-xl p-6 backdrop-blur-lg border border-white/20 relative overflow-hidden">
+
+
+    <div id="divEtapa1" class="tela-onboard"> <div class="flex items-center justify-center mb-4 px-8 mx-auto">
+        <h2 class=" text-xl">Controle 360</h2>
+        <img src="./assets/imagens/logoteste.png" alt="Logo Controle360" class="w-6">
+        </div>
+      <img src="./assets/imagens/etapa1.png" alt="Um cofre de porquinho com uma moeda" class="mx-auto w-40 rounded-lg mb-4">
+      <h2 class="text-xl font-bold mb-2"> Bem-vindo ao Controle360 </h2>
+      <p class="mb-4">Com a gente você vai aprender a cuidar melhor da sua grana, sem complicação.</p>
+      <button onclick="mostrarEtapa(2)" id="botaoProximo1" class="animate-pulse bg-white/20 hover:bg-white/30 py-2 px-4 rounded-lg w-full">Continuar</button>
+    </div>
+
+ 
+    <div id="divEtapa2" class="tela-onboard hidden">
+        <div class="flex items-center justify-center mb-4 px-8 mx-auto">
+        <h2 class=" text-xl">Controle 360</h2>
+        <img src="./assets/imagens/logoteste.png" alt="Logo Controle360" class="w-6">
+        </div>
+      <img src="./assets/imagens/etapa2.png" alt="Um bloco de notas com asas" class="mx-auto w-40 rounded-lg mb-4">
+      <h2 class="text-xl font-bold mb-2">Controle seus gasto</h2>
+      <p class="mb-4">Anota tudinho que entra e sai do seu bolso, de um jeito fácil de ver.</p>
+      <button onclick="mostrarEtapa(3)" id="botaoProximo2" class="bg-white/20 hover:bg-white/30 py-2 px-4 rounded-lg w-full">Continuar</button>
+    </div>
+
+
+    <div id="divEtapa3" class="tela-onboard hidden">
+        <div class="flex items-center justify-center mb-4 px-8 mx-auto">
+        <h2 class=" text-xl">Controle 360</h2>
+        <img src="./assets/imagens/logoteste.png" alt="Logo Controle360" class="w-6">
+        </div>
+        <img src="./assets/imagens/etapa3.png" alt="Uma imagem que define metas" class="mx-auto w-40 rounded-lg mb-4">
+      <h2 class="text-xl font-bold mb-2">Crie suas meta</h2>
+      <p class="mb-4">Quer comprar uma casa, moto ou guardar para uma viagem? Nós podemos ajudar nisso.</p>
+      <button onclick="mostrarEtapa(4)" id="botaoProximo3" class="bg-white/20 hover:bg-white/30 py-2 px-4 rounded-lg w-full">Continuar</button>
+    </div>
+
+
+    <div id="divEtapa4" class="tela-onboard hidden">
+        <div class="flex items-center justify-center mb-4 px-8 mx-auto">
+        <h2 class=" text-xl">Controle 360</h2>
+        <img src="./assets/imagens/logoteste.png" alt="Logo Controle360" class="w-6">
+        </div>
+        <img src="./assets/imagens/etapa4.png" alt="Um cofre de porquinho com uma moeda" class="mx-auto w-40 rounded-lg mb-4">
+      <h2 class="text-xl font-bold mb-2">Bora começar?</h2>
+      <p class="mb-4">Agora é só criar sua conta e começar a cuidar bem do seu dinheiro 💰</p>
+      <a href="#" onclick="fim();" class="bg-white/30 hover:bg-white/50 text-white font-semibold py-2 px-4 rounded-lg w-full text-center block my-4">Criar conta</a>
+      <a href="#" onclick="mostrarEtapa(1);" class="bg-white/30 hover:bg-white/50 text-white font-semibold py-2 px-4 rounded-lg w-full text-center block" alt="Apenas para fins de avaliação e demonstração">Voltar ao ínicio</a>
+    </div>
+
+  </div>
+
+
+</body>
+</html>
